@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Calculadora de pretamo</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <form action="prestamo.php" method="post">
+
+        <label for="v_inmueble">Valor del inmueble</label>
+        <input type="number" id="v_inmueble" name="v_inmueble">
+        <br><br>
+        <label for="p_inicial">Pago inicial</label>
+        <input type="number" id="p_inicial" name="p_inicial">
+        <br><br>
+        <label for="interes">taza de Interes anual (%)</label>
+        <input type="number" id="interes" name="interes">
+        <br><br>
+        <label for="periodo">Periodo de Pago (meses)</label>
+        <input type="number" id="periodo" name="periodo">
+        <br><br>
+        <button type="submit">Calcular</button>
+    </form>
+
+</body>
+</html>
