@@ -43,3 +43,17 @@ h1{
     height: inherit;
     width: 50%;
 }
+table{
+    border-collapse: collapse;
+    width: 76%;
+    margin: auto;
+    border: teal solid 2px;
+    padding: 10px;
+
+}
+th, td{
+    color: #008080;
+    border: gray solid 1px;
+    padding: 5px;
+    text-align: center;
+}

@@ -46,7 +46,7 @@
 
    <br><br><br>
 <?php
-
+error_reporting(0);
 if (isset($_POST['v_inmueble'])){
 $v_inmueble = $_POST['v_inmueble'];
 $p_inicial = $_POST['p_inicial'];
@@ -85,8 +85,29 @@ $total= $total + $p_inicial;
 echo '<br> Total con anticipo: <b>US$' . number_format($total,2).'</b><br></div>';
 
 }
-
+$total= $pago_mensual * $periodo;
 ?>
+
+<br>
+<table>
+    <tr>
+        <th>Mes</th>
+        <th>Pago </th>
+        <th>Hipoteca</th>
+    </tr>
+    <tr>
+        <td> </td>
+        <td> </td>
+        <td><?php echo 'US$'.number_format($total,2)?></td>
+    </tr>
+    <?php for ($i=1; $i <= $periodo ; $i++):?>
+    <tr>
+        <td><?php echo $i?></td>
+        <td><?php echo number_format($pago_mensual,2)?></td>
+        <td><?php echo number_format($total= $total - $pago_mensual,2)?></td>
+    </tr>
+    <?php endfor;?>
+</table>
 
 </div>
 
